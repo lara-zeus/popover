@@ -11,5 +11,5 @@ class Popover extends Entry
     use HasIcon;
     use HasPopover;
 
-    protected string $view = 'zeus::popover';
+    protected string $view = 'zeus-popover::popover';
 }
