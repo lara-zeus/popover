@@ -2,7 +2,7 @@
 <a href="https://larazeus.com"><img src="https://larazeus.com/images/popover-banner.png" /></a>
 </p>
 
-<h4 align="center">Show a Popover with custom content in tables and infolist.</h4>
+<h4 align="center">Show a Popover (tippyjs) with custom content in tables and infolist.</h4>
 
 <p align="center">
 
@@ -26,7 +26,7 @@
 
 ## Demo
 
-> Visit our demo site: https://demo.larazeus.com/admin/popover
+> Visit our demo site: https://demo.larazeus.com/admin/users
 
 ## Full Documentation
 

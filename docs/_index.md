@@ -1,7 +1,7 @@
 ---
 title: v1
-slogan: Qr Code Input to generate Qr Code with designing options for filamentPHP
-githubUrl: https://github.com/lara-zeus/qr
+slogan: filamentphp component to show a Popover with custom content in tables and infolist
+githubUrl: https://github.com/lara-zeus/popover
 branch: v1.x
-icon: bx-qr-scan
+icon: grommet-tip
 ---

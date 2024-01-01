@@ -4,36 +4,26 @@ weight: 1
 ---
 
 ## Introduction
-@zeus Qr Code Input to generate Qr Code with designing options for filamentPHP.
+@zeus Popover is filamentphp component to show a Popover (tippyjs) with custom content in tables and infolist
 
-**[Demo](https://demo.larazeus.com/admin/qr-code) · [Github](https://github.com/lara-zeus/qr) · [Discord](https://discord.com/channels/883083792112300104/1184785550964686919)**
-
+**[Demo](https://demo.larazeus.com/admin/users) · [Github](https://github.com/lara-zeus/popover) · [Discord](#)**
 
 ## features
-- 🔥 set the destination URL
-- 🔥 all options in modal or slidOver
-- 🔥 configure all options
-- 🔥 Available Options:
-    - QR size
-    - QR margin
-    - QR solid front color
-    - QR solid background color
-    - Qr style: square, round, dot
-    - Gradient Color (from,to)
-    - Gradient type (vertical, horizontal, diagonal, inverse_diagonal, radial)
-    - Eye Color (inner,outer)
-    - Eye style (square, circle)
+
+- 🔥 trigger (click)
+- 🔥 placement (right)
+- 🔥 offset from the content
+- 🔥 Max Width
+- 🔥 icon
 
 ## Screenshots
 
-![](https://larazeus.com/images/screenshots/qr/form-1.png)
-
-![](https://larazeus.com/images/screenshots/qr/form-2.png)
+![](https://larazeus.com/images/screenshots/popover/popover-1.jpeg)
 
 ## Support
 
 Available support channels:
 
-* Join our channel in discord [Discord](https://discord.com/channels/883083792112300104/1184785550964686919)
-* Open an issue on [GitHub](https://github.com/lara-zeus/qr/issues)
+* Join our channel in discord [Discord](#)
+* Open an issue on [GitHub](https://github.com/lara-zeus/popover/issues)
 * Email us using the [contact center](https://larazeus.com/contact-us)

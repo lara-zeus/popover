@@ -6,7 +6,7 @@ use Filament\Support\Concerns;
 use Filament\Tables\Columns\Column;
 use LaraZeus\Popover\Concerns\HasPopover;
 
-class Popover extends Column
+class PopoverColumn extends Column
 {
     use Concerns\HasIcon;
     use HasPopover;

@@ -6,7 +6,7 @@ use Filament\Infolists\Components\Concerns\HasIcon;
 use Filament\Infolists\Components\Entry;
 use LaraZeus\Popover\Concerns\HasPopover;
 
-class Popover extends Entry
+class PopoverEntry extends Entry
 {
     use HasIcon;
     use HasPopover;
