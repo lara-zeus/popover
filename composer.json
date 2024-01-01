@@ -1,10 +1,13 @@
 {
-    "name": "lara-zeus/qr",
-    "description": "Zeus Qr Code Input to generate Qr Code with designing options for filamentPHP",
+    "name": "lara-zeus/popover",
+    "description": "Zeus Popover is filamentphp component to show a Popover with custom content in tables and infolist\n",
     "keywords": [
         "laravel",
         "lara-zeus",
-        "qr",
+        "ui",
+        "tooltip",
+        "tippy",
+        "popover",
         "code",
         "design",
         "input",
@@ -13,10 +16,10 @@
         "generator",
         "filamentphp"
     ],
-    "homepage": "https://larazeus.com/qr",
+    "homepage": "https://larazeus.com/popover",
     "support": {
-        "issues": "https://github.com/lara-zeus/qr/issues",
-        "source": "https://github.com/lara-zeus/qr"
+        "issues": "https://github.com/lara-zeus/popover/issues",
+        "source": "https://github.com/lara-zeus/popover"
     },
     "license": "MIT",
     "type": "library",
@@ -30,7 +33,6 @@
     "require": {
         "php": "^8.1",
         "filament/filament": "^3.0",
-        "simplesoftwareio/simple-qrcode": "~4",
         "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
@@ -43,7 +45,7 @@
     },
     "autoload": {
         "psr-4": {
-            "LaraZeus\\Qr\\": "src"
+            "LaraZeus\\Popover\\": "src"
         }
     },
     "scripts": {
@@ -62,7 +64,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaraZeus\\Qr\\QrServiceProvider"
+                "LaraZeus\\Popover\\PopoverServiceProvider"
             ]
         }
     },
