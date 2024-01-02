@@ -6,7 +6,7 @@ weight: 1
 ## Introduction
 @zeus Popover is filamentphp component to show a Popover (tippyjs) with custom content in tables and infolist
 
-**[Demo](https://demo.larazeus.com/admin/users) · [Github](https://github.com/lara-zeus/popover) · [Discord](#)**
+**[Demo](https://demo.larazeus.com/admin/users) · [Github](https://github.com/lara-zeus/popover) · [Discord](https://discord.com/channels/883083792112300104/1191457684856246353)**
 
 ## features
 
@@ -24,6 +24,6 @@ weight: 1
 
 Available support channels:
 
-* Join our channel in discord [Discord](#)
+* Join our channel in discord [Discord](https://discord.com/channels/883083792112300104/1191457684856246353)
 * Open an issue on [GitHub](https://github.com/lara-zeus/popover/issues)
 * Email us using the [contact center](https://larazeus.com/contact-us)
