@@ -23,6 +23,6 @@ jobs:
       - name: Commit updated CHANGELOG
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: !.x
+          branch: 1.x
           commit_message: Update CHANGELOG
           file_pattern: CHANGELOG.md
