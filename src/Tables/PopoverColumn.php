@@ -10,10 +10,10 @@ use LaraZeus\Popover\Concerns\HasPopover;
 
 class PopoverColumn extends Column
 {
-    use Concerns\HasIcon;
-    use HasPopover;
-    use HasDescription;
     use CanWrap;
+    use Concerns\HasIcon;
+    use HasDescription;
+    use HasPopover;
 
     protected string $view = 'zeus-popover::popover';
 
