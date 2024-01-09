@@ -6,12 +6,26 @@
         $getOffset = $getOffset();
         $getPopOverMaxWidth = $getPopOverMaxWidth();
         $getIcon = $getIcon($getState);
+        $descriptionAbove = $getDescriptionAbove();
+        $descriptionBelow = $getDescriptionBelow();
+        $canWrap = $canWrap();
     @endphp
     <template x-ref="template">
         <div class="fi-popover-content">
             {{ $getContent() }}
         </div>
     </template>
+
+    @if (filled($descriptionAbove))
+        <p
+            @class([
+                'text-sm text-gray-500 dark:text-gray-400',
+                'whitespace-normal' => $canWrap,
+            ])
+        >
+            {{ $descriptionAbove }}
+        </p>
+    @endif
 
     <button
         class="w-full fi-popover-trigger cursor-pointer flex items-center gap-2"
@@ -37,4 +51,15 @@
             />
         @endif
     </button>
+
+    @if (filled($descriptionBelow))
+        <p
+            @class([
+                'text-sm text-gray-500 dark:text-gray-400',
+                'whitespace-normal' => $canWrap,
+            ])
+        >
+            {{ $descriptionBelow }}
+        </p>
+    @endif
 </div>
