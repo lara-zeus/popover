@@ -15,7 +15,7 @@ class PopoverColumn extends Column
     use HasDescription;
     use HasPopover;
 
-    protected string $view = 'zeus-popover::popover';
+    protected string $view = 'zeus-popover::popover-column';
 
     protected function setUp(): void
     {
