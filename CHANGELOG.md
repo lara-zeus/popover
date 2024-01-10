@@ -2,6 +2,14 @@
 
 All notable changes to `Popover` will be documented in this file
 
+## 1.0.3 - 2024-01-10
+
+### What's Changed
+
+* set separate views for column and entry by @atmonshi in https://github.com/lara-zeus/popover/pull/4
+
+**Full Changelog**: https://github.com/lara-zeus/popover/compare/1.0.2...1.0.3
+
 ## 1.0.2 - 2024-01-09
 
 ### What's Changed
