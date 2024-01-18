@@ -1,4 +1,7 @@
-<div x-data class="fi-popover">
+<div
+    wire:key="popopoopop-{{ $recordKey }}"
+    x-data class="fi-popover"
+>
     @php
         $getState = $getState();
         $getTrigger = $getTrigger();
@@ -9,12 +12,8 @@
         $descriptionAbove = $getDescriptionAbove();
         $descriptionBelow = $getDescriptionBelow();
         $canWrap = $canWrap();
+        $getContent = $getContent();
     @endphp
-    <template x-ref="template">
-        <div class="fi-popover-content">
-            {{ $getContent() }}
-        </div>
-    </template>
 
     @if (filled($descriptionAbove))
         <p
@@ -27,30 +26,29 @@
         </p>
     @endif
 
-    <button
-        class="w-full fi-popover-trigger cursor-pointer flex items-center gap-2"
-        x-tooltip="{
-            trigger: '{{ $getTrigger }}',
-            placement: '{{ $getPlacement }}',
-            offset: @js($getOffset),
-            maxWidth: '{{ $getPopOverMaxWidth }}',
+    <div x-data="{ open: false }">
+        <div
+            class="w-full fi-popover-trigger cursor-pointer flex items-center gap-2"
+            x-ref="button" @click="open = ! open" {{--@pointerenter="open = ! open"--}}>
+            {{ $getState }}
+            @if($getIcon)
+                <x-filament::icon
+                    :icon="$getIcon"
+                    class="h-5 w-5 text-gray-500 dark:text-gray-400"
+                />
+            @endif
+        </div>
 
-            content: () => $refs.template.innerHTML,
-            appendTo: $root,
-            allowHTML: true,
-            interactive: true,
-            theme: $store.theme,
-        }">
-
-        {{ $getState }}
-
-        @if($getIcon)
-            <x-filament::icon
-                :icon="$getIcon"
-                class="h-5 w-5 text-gray-500 dark:text-gray-400"
-            />
-        @endif
-    </button>
+        <div class="w-[{{ $getPopOverMaxWidth }}px] bg-white dark:bg-gray-800"
+             x-cloak
+             x-show="open"
+             x-anchor.{{ $getPlacement }}.offset.{{ $getOffset }}="$refs.button"
+             {{--@pointerleave="open = false"--}}
+             @click.away="open = false"
+        >
+            {{ $getContent }}
+        </div>
+    </div>
 
     @if (filled($descriptionBelow))
         <p
