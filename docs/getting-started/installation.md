@@ -23,10 +23,10 @@ composer require lara-zeus/popover
     ->toggleable()
     
     // main options
-    ->trigger('click') // for more: https://atomiks.github.io/tippyjs/v6/all-props/#trigger
-    ->placement('right') // for more: https://atomiks.github.io/tippyjs/v6/all-props/#placement
-    ->offset([0, 10]) // for more: https://atomiks.github.io/tippyjs/v6/all-props/#offset
-    ->popOverMaxWidth('none') // for more: https://atomiks.github.io/tippyjs/v6/all-props/#maxwidth
+    ->trigger('click') // for now popover only support click!
+    ->placement('right') // for more: https://alpinejs.dev/plugins/anchor#positioning
+    ->offset(10) // int px, for more: https://alpinejs.dev/plugins/anchor#offset
+    ->popOverMaxWidth('none') // todo change to classes as in filament for more: 
     ->icon('heroicon-o-chevron-right') // show custom icon
 
     // direct HTML content
@@ -45,10 +45,10 @@ composer require lara-zeus/popover
 ```php
 \LaraZeus\Popover\Infolists\PopoverEntry::make('name')
     // main options
-    ->trigger('click') // for more: https://atomiks.github.io/tippyjs/v6/all-props/#trigger
-    ->placement('right') // for more: https://atomiks.github.io/tippyjs/v6/all-props/#placement
-    ->offset([0, 10]) // for more: https://atomiks.github.io/tippyjs/v6/all-props/#offset
-    ->popOverMaxWidth('none') // for more: https://atomiks.github.io/tippyjs/v6/all-props/#maxwidth
+    ->trigger('click') // for now popover only support click!
+    ->placement('right') // for more: https://alpinejs.dev/plugins/anchor#positioning
+    ->offset(10) // int px, for more: https://alpinejs.dev/plugins/anchor#offset
+    ->popOverMaxWidth('none') // todo change to classes as in filament for more: 
     ->icon('heroicon-o-chevron-right') // show custom icon
 
     // direct HTML content
