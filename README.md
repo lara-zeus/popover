@@ -27,7 +27,7 @@
 
 ## Demo
 
-> Visit our demo site: https://demo.larazeus.com/admin/users
+> Visit our demo site: https://demo.larazeus.com/admin/components-demo/popover
 
 ## Full Documentation
 
