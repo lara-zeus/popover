@@ -2,6 +2,14 @@
 
 All notable changes to `Popover` will be documented in this file
 
+## 1.0.4 - 2024-01-19
+
+### What's Changed
+
+* hide tooltip container if the content is null by @atmonshi in https://github.com/lara-zeus/popover/pull/8
+
+**Full Changelog**: https://github.com/lara-zeus/popover/compare/1.0.3...1.0.4
+
 ## 1.0.3 - 2024-01-10
 
 ### What's Changed
