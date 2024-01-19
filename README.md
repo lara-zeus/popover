@@ -13,7 +13,8 @@
 
 </p>
 
-## features
+## Features
+
 - 🔥 trigger (click)
 - 🔥 placement (right)
 - 🔥 offset from the content
