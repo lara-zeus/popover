@@ -9,10 +9,12 @@
         $descriptionAbove = $getDescriptionAbove();
         $descriptionBelow = $getDescriptionBelow();
         $canWrap = $canWrap();
+        $getContent = $getContent();
     @endphp
+    
     <template x-ref="template">
         <div class="fi-popover-content">
-            {{ $getContent() }}
+            {{ $getContent }}
         </div>
     </template>
 
@@ -29,25 +31,28 @@
 
     <button
         class="w-full fi-popover-trigger cursor-pointer flex items-center gap-2"
-        x-tooltip="{
-            trigger: '{{ $getTrigger }}',
-            placement: '{{ $getPlacement }}',
-            offset: @js($getOffset),
-            maxWidth: '{{ $getPopOverMaxWidth }}',
+        @if($getContent !== null)
+            x-tooltip="{
+                trigger: '{{ $getTrigger }}',
+                placement: '{{ $getPlacement }}',
+                offset: @js($getOffset),
+                maxWidth: '{{ $getPopOverMaxWidth }}',
 
-            content: () => $refs.template.innerHTML,
-            appendTo: $root,
-            allowHTML: true,
-            interactive: true,
-            theme: $store.theme,
-        }">
+                content: () => $refs.template.innerHTML,
+                appendTo: $root,
+                allowHTML: true,
+                interactive: true,
+                theme: $store.theme,
+            }"
+        @endif
+    >
 
         {{ $getState }}
 
         @if($getIcon)
             <x-filament::icon
-                :icon="$getIcon"
-                class="h-5 w-5 text-gray-500 dark:text-gray-400"
+                    :icon="$getIcon"
+                    class="h-5 w-5 text-gray-500 dark:text-gray-400"
             />
         @endif
     </button>
