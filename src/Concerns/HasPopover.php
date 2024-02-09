@@ -10,7 +10,7 @@ trait HasPopover
 
     protected mixed $placement = 'top';
 
-    protected array $offset = [0.10];
+    protected int $offset = 0;
 
     protected string $popOverMaxWidth = '300';
 
@@ -50,14 +50,14 @@ trait HasPopover
         return $this->evaluate($this->placement);
     }
 
-    public function offset(array $offset): static
+    public function offset(int $offset): static
     {
         $this->offset = $offset;
 
         return $this;
     }
 
-    public function getOffset(): array
+    public function getOffset(): int
     {
         return $this->offset;
     }

@@ -1,4 +1,8 @@
-<div x-data class="fi-popover">
+<div
+    wire:key="{{ $this->getId() }}.table.record.{{ $recordKey }}.column.{{ $getName() }}"
+    x-data="{ open: false }"
+    class="fi-popover fi-ta-text grid w-full gap-y-1 px-3 py-4"
+>
     @php
         $getState = $getState();
         $getTrigger = $getTrigger();
@@ -11,12 +15,6 @@
         $canWrap = $canWrap();
         $getContent = $getContent();
     @endphp
-    
-    <template x-ref="template">
-        <div class="fi-popover-content">
-            {{ $getContent }}
-        </div>
-    </template>
 
     @if (filled($descriptionAbove))
         <p
@@ -29,24 +27,12 @@
         </p>
     @endif
 
-    <button
-        class="w-full fi-popover-trigger cursor-pointer flex items-center gap-2"
-        @if($getContent !== null)
-            x-tooltip="{
-                trigger: '{{ $getTrigger }}',
-                placement: '{{ $getPlacement }}',
-                offset: @js($getOffset),
-                maxWidth: '{{ $getPopOverMaxWidth }}',
-
-                content: () => $refs.template.innerHTML,
-                appendTo: $root,
-                allowHTML: true,
-                interactive: true,
-                theme: $store.theme,
-            }"
-        @endif
+    <div
+        class="relative w-full fi-popover-trigger cursor-pointer flex items-center gap-2"
+        x-ref="button"
+        @click="open = ! open"
+        {{--@pointerenter="open = ! open"--}}
     >
-
         {{ $getState }}
 
         @if($getIcon)
@@ -55,7 +41,17 @@
                     class="h-5 w-5 text-gray-500 dark:text-gray-400"
             />
         @endif
-    </button>
+    </div>
+
+    <div class="z-50 fi-popover-content w-[{{ $getPopOverMaxWidth }}px] border border-gray-500 shadow-lg bg-white dark:bg-gray-800"
+         x-cloak
+         x-show="open"
+         x-anchor.{{ $getPlacement }}.offset.{{ $getOffset }}="$refs.button"
+         {{--@pointerleave="open = false"--}}
+         @click.away="open = false"
+    >
+        {{ $getContent }}
+    </div>
 
     @if (filled($descriptionBelow))
         <p
