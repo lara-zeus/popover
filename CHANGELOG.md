@@ -2,6 +2,36 @@
 
 All notable changes to `Popover` will be documented in this file
 
+## 1.1.0 - 2024-02-09
+
+### What's Changed
+
+* refactor to alpine anchor by @atmonshi in https://github.com/lara-zeus/popover/pull/7
+  using alpine `x-anchor` instead of tooltip js
+
+if you're using it with livewire component, you must add a unieqe key as the example:
+
+in your form:
+please notice the `type` is our key per column
+
+```php
+PopoverColumn::make('name')
+    //.... other config
+    ->content(fn ($record) => view('filament.user-card', ['record' => $record, 'type' => 'name'])),
+
+PopoverColumn::make('email')
+    //.... other config
+    ->content(fn ($record) => view('filament.user-card', ['record' => $record, 'type' => 'email'])),
+
+```
+now in your LW view:
+
+```html
+<livewire:user-card :$record :key="$record->id.'-'.$type"/>
+
+```
+**Full Changelog**: https://github.com/lara-zeus/popover/compare/1.0.4...1.1.0
+
 ## 1.0.4 - 2024-01-19
 
 ### What's Changed
