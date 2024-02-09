@@ -4,7 +4,6 @@ Popover (tippyjs) with custom content in tables and infolist
 
 ## Features
 
-## features
 - 🔥 trigger (click)
 - 🔥 placement (right)
 - 🔥 offset from the content
@@ -21,4 +20,4 @@ Popover (tippyjs) with custom content in tables and infolist
 - [Discord](https://discord.com/channels/883083792112300104/1191457684856246353)
 - [Docs](https://larazeus.com/docs/popover)
 - [Github](https://github.com/lara-zeus/popover)
-- [Demo](https://demo.larazeus.com/admin/users)
+- [Demo](https://demo.larazeus.com/admin/components-demo/popover)

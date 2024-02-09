@@ -27,12 +27,23 @@
         </p>
     @endif
 
-    <div
-        class="relative w-full fi-popover-trigger cursor-pointer flex items-center gap-2"
-        x-ref="button"
-        @click="open = ! open"
-        {{--@pointerenter="open = ! open"--}}
+    <div class="w-full fi-popover-trigger cursor-pointer flex items-center gap-2"
+        @if($getContent !== null)
+            x-tooltip="{
+                trigger: '{{ $getTrigger }}',
+                placement: '{{ $getPlacement }}',
+                offset: @js($getOffset),
+                maxWidth: '{{ $getPopOverMaxWidth }}',
+
+                content: () => $refs.template.innerHTML,
+                appendTo: $root,
+                allowHTML: true,
+                interactive: true,
+                theme: $store.theme,
+            }"
+        @endif
     >
+
         {{ $getState }}
 
         @if($getIcon)

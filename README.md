@@ -13,7 +13,8 @@
 
 </p>
 
-## features
+## Features
+
 - 🔥 trigger (click)
 - 🔥 placement (right)
 - 🔥 offset from the content
@@ -26,7 +27,7 @@
 
 ## Demo
 
-> Visit our demo site: https://demo.larazeus.com/admin/users
+> Visit our demo site: https://demo.larazeus.com/admin/components-demo/popover
 
 ## Full Documentation
 
