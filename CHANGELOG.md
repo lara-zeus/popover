@@ -2,6 +2,14 @@
 
 All notable changes to `Popover` will be documented in this file
 
+## 1.1.1 - 2024-02-24
+
+### What's Changed
+
+* add support for hover trigger by @atmonshi in https://github.com/lara-zeus/popover/pull/10
+
+**Full Changelog**: https://github.com/lara-zeus/popover/compare/1.1.0...1.1.1
+
 ## 1.1.0 - 2024-02-09
 
 ### What's Changed
@@ -23,11 +31,13 @@ PopoverColumn::make('email')
     //.... other config
     ->content(fn ($record) => view('filament.user-card', ['record' => $record, 'type' => 'email'])),
 
+
 ```
 now in your LW view:
 
 ```html
 <livewire:user-card :$record :key="$record->id.'-'.$type"/>
+
 
 ```
 **Full Changelog**: https://github.com/lara-zeus/popover/compare/1.0.4...1.1.0
