@@ -10,7 +10,7 @@ weight: 1
 
 ## features
 
-- 🔥 trigger (click)
+- 🔥 trigger (click,hover)
 - 🔥 placement (right)
 - 🔥 offset from the content
 - 🔥 Max Width

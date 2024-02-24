@@ -4,7 +4,7 @@ Popover (tippyjs) with custom content in tables and infolist
 
 ## Features
 
-- 🔥 trigger (click)
+- 🔥 trigger (click,hover)
 - 🔥 placement (right)
 - 🔥 offset from the content
 - 🔥 Max Width
