@@ -53,7 +53,7 @@
         @endif
     </div>
 
-    <div class="z-50 fi-popover-content w-[{{ $getPopOverMaxWidth }}px] border border-gray-500 shadow-lg bg-white dark:bg-gray-800"
+    <div class="z-50 fi-popover-content w-[{{ $getPopOverMaxWidth }}px] border border-gray-100 rounded-lg shadow-lg bg-white dark:bg-gray-800"
          x-cloak x-trap="open"
          x-show="open"
          x-anchor.{{ $getPlacement }}.offset.{{ $getOffset }}="$refs.button"
