@@ -15,9 +15,7 @@
     x-data="{ open: false }"
 
     @if($getTrigger === 'hover')
-        @pointerleave="clearTimeout($time); open = false"
-    @else
-        @click.away="open = false"
+        @pointerleave="$refs.panel.close"
     @endif
 
     class="fi-popover fi-ta-text grid w-full gap-y-1 px-3 py-4"
@@ -38,9 +36,9 @@
         class="relative w-full fi-popover-trigger cursor-pointer flex items-center gap-2"
         x-ref="button"
         @if($getTrigger === 'hover')
-            @pointerenter="$time = setTimeout(() => { open = true }, 200)"
+            @pointerenter="$refs.panel.open"
         @else
-            @click="open = ! open"
+            @click="$refs.panel.toggle"
         @endif
     >
         {{ $getState }}
@@ -53,10 +51,12 @@
         @endif
     </div>
 
-    <div class="z-50 fi-popover-content w-[{{ $getPopOverMaxWidth }}px] border border-gray-100 rounded-lg shadow-lg bg-white dark:bg-gray-800"
-         x-cloak x-trap="open"
-         x-show="open"
-         x-anchor.{{ $getPlacement }}.offset.{{ $getOffset }}="$refs.button"
+    <div class="z-50 fi-popover-content w-[{{ $getPopOverMaxWidth }}px] border border-gray-100 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition"
+         x-cloak
+         x-ref="panel"
+         x-transition:enter-start="opacity-0"
+         x-transition:leave-end="opacity-0"
+         x-float.placement.bottom-end.flip.teleport.offset="{ offset: 8 }"
     >
         {{ $getContent }}
     </div>
