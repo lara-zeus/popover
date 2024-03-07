@@ -45,8 +45,8 @@
 
         @if($getIcon)
             <x-filament::icon
-                    :icon="$getIcon"
-                    class="h-5 w-5 text-gray-500 dark:text-gray-400"
+                :icon="$getIcon"
+                class="h-5 w-5 text-gray-500 dark:text-gray-400"
             />
         @endif
     </div>
@@ -56,7 +56,7 @@
          x-ref="panel"
          x-transition:enter-start="opacity-0"
          x-transition:leave-end="opacity-0"
-         x-float.placement.bottom-end.flip.teleport.offset="{ offset: 8 }"
+         x-float.placement.{{ $getPlacement }}.flip.teleport.offset="{ offset: {{ $getOffset }} }"
     >
         {{ $getContent }}
     </div>
