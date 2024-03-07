@@ -12,7 +12,7 @@
 @endphp
 <div
     wire:key="{{ $this->getId() }}.table.record.{{ $recordKey }}.column.{{ $getName() }}"
-    x-data="{ open: false }"
+    x-data
 
     @if($getTrigger === 'hover')
         @pointerleave="$refs.panel.close"
@@ -34,7 +34,6 @@
 
     <div
         class="relative w-full fi-popover-trigger cursor-pointer flex items-center gap-2"
-        x-ref="button"
         @if($getTrigger === 'hover')
             @pointerenter="$refs.panel.open"
         @else
@@ -52,10 +51,10 @@
     </div>
 
     <div class="z-50 fi-popover-content w-[{{ $getPopOverMaxWidth }}px] border border-gray-100 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition"
-         x-cloak
-         x-ref="panel"
          x-transition:enter-start="opacity-0"
          x-transition:leave-end="opacity-0"
+         x-cloak
+         x-ref="panel"
          x-float.placement.{{ $getPlacement }}.flip.teleport.offset="{ offset: {{ $getOffset }} }"
     >
         {{ $getContent }}
