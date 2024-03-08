@@ -11,11 +11,11 @@ use LaraZeus\Popover\Concerns\HasPopover;
 
 class PopoverColumn extends Column
 {
+    use CanFormatState;
     use CanWrap;
     use Concerns\HasIcon;
     use HasDescription;
     use HasPopover;
-    use CanFormatState;
 
     protected string $view = 'zeus-popover::popover-column';
 
