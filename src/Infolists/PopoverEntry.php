@@ -9,9 +9,9 @@ use LaraZeus\Popover\Concerns\HasPopover;
 
 class PopoverEntry extends Entry
 {
+    use CanFormatState;
     use HasIcon;
     use HasPopover;
-    use CanFormatState;
 
     protected string $view = 'zeus-popover::popover-entry';
 }
