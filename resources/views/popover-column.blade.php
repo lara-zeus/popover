@@ -10,7 +10,6 @@
     $canWrap = $canWrap();
     $getContent = $getContent();
     $formattedState = $formatState($getState)
-
 @endphp
 <div
     wire:key="{{ $this->getId() }}.table.record.{{ $recordKey }}.column.{{ $getName() }}"
