@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://larazeus.com"><img src="https://larazeus.com/images/popover-banner.png" /></a>
+<a href="https://larazeus.com"><img src="https://larazeus.com/images/lara-zeus-popover.png" /></a>
 </p>
 
 <h4 align="center">Show a Popover (tippyjs) with custom content in tables and infolist.</h4>
