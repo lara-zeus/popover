@@ -2,6 +2,18 @@
 
 All notable changes to `Popover` will be documented in this file
 
+## 1.1.5 - 2024-03-13
+
+### What's Changed
+
+* fix formatState by @andreazanini in https://github.com/lara-zeus/popover/pull/18
+
+### New Contributors
+
+* @andreazanini made their first contribution in https://github.com/lara-zeus/popover/pull/18
+
+**Full Changelog**: https://github.com/lara-zeus/popover/compare/1.1.4...1.1.5
+
 ## 1.1.4 - 2024-03-09
 
 ### What's Changed
@@ -60,11 +72,13 @@ PopoverColumn::make('email')
 
 
 
+
 ```
 now in your LW view:
 
 ```html
 <livewire:user-card :$record :key="$record->id.'-'.$type"/>
+
 
 
 
