@@ -2,6 +2,14 @@
 
 All notable changes to `Popover` will be documented in this file
 
+## 1.1.7 - 2024-12-22
+
+### What's Changed
+
+* Fixed the popover border display in dark theme by @devSviat in https://github.com/lara-zeus/popover/pull/22
+
+**Full Changelog**: https://github.com/lara-zeus/popover/compare/1.1.6...1.1.7
+
 ## 1.1.6 - 2024-08-27
 
 ### What's Changed
@@ -86,11 +94,13 @@ PopoverColumn::make('email')
 
 
 
+
 ```
 now in your LW view:
 
 ```html
 <livewire:user-card :$record :key="$record->id.'-'.$type"/>
+
 
 
 
