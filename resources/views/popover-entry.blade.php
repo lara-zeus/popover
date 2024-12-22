@@ -33,7 +33,7 @@
         @endif
     </div>
 
-    <div class="z-50 fi-popover-content w-[{{ $getPopOverMaxWidth }}px] border border-gray-100 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition"
+    <div class="z-50 fi-popover-content w-[{{ $getPopOverMaxWidth }}px] ring-1 ring-gray-950/5 dark:ring-white/10 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition"
          x-transition:enter-start="opacity-0"
          x-transition:leave-end="opacity-0"
          x-cloak
