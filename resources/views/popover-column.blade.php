@@ -9,7 +9,8 @@
     $descriptionBelow = $getDescriptionBelow();
     $canWrap = $canWrap();
     $getContent = $getContent();
-    $formattedState = $formatState($getState)
+    $formattedState = $formatState($getState);
+    $color = $getColor($state);
 @endphp
 <div
     wire:key="{{ $this->getId() }}.table.record.{{ $recordKey }}.column.{{ $getName() }}"
@@ -34,7 +35,21 @@
     @endif
 
     <div
-        class="text-sm relative w-full fi-popover-trigger cursor-pointer flex items-center gap-2"
+        @style([
+            \Filament\Support\get_color_css_variables(
+                $color,
+                shades: [400, 600],
+                alias: 'tables::columns.text-column.item.label',
+            ) => ! in_array($color, [null, 'gray']),
+        ])
+        @class([
+            'text-sm relative w-full fi-popover-trigger cursor-pointer flex items-center gap-2',
+            match ($color) {
+                null => 'text-gray-950 dark:text-white',
+                'gray' => 'text-gray-500 dark:text-gray-400',
+                default => 'text-custom-600 dark:text-custom-400',
+            },
+        ])
         @if($getTrigger === 'hover')
             @pointerenter="$refs.panel.open"
         @else
