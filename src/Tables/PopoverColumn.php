@@ -15,9 +15,9 @@ class PopoverColumn extends Column
     use CanFormatState;
     use CanWrap;
     use Concerns\HasIcon;
+    use HasColor;
     use HasDescription;
     use HasPopover;
-    use HasColor;
 
     protected string $view = 'zeus-popover::popover-column';
 
