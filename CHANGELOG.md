@@ -2,6 +2,14 @@
 
 All notable changes to `Popover` will be documented in this file
 
+## 1.1.8 - 2025-01-13
+
+### What's Changed
+
+* support color for popover column by @atmonshi in https://github.com/lara-zeus/popover/pull/25
+
+**Full Changelog**: https://github.com/lara-zeus/popover/compare/1.1.7...1.1.8
+
 ## 1.1.7 - 2024-12-22
 
 ### What's Changed
@@ -95,11 +103,13 @@ PopoverColumn::make('email')
 
 
 
+
 ```
 now in your LW view:
 
 ```html
 <livewire:user-card :$record :key="$record->id.'-'.$type"/>
+
 
 
 
