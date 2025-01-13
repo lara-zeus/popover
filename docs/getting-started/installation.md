@@ -23,6 +23,7 @@ composer require lara-zeus/popover
     ->toggleable()
     
     // main options
+    ->color('pink') // coloring, and its accept a closure too
     ->trigger('click') // support click and hover
     ->placement('right') // for more: https://alpinejs.dev/plugins/anchor#positioning
     ->offset(10) // int px, for more: https://alpinejs.dev/plugins/anchor#offset
