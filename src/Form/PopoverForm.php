@@ -8,8 +8,8 @@ use LaraZeus\Popover\Concerns\HasPopover;
 
 class PopoverForm extends Placeholder
 {
-    use HasPopover;
     use HasIcon;
+    use HasPopover;
 
     protected string $view = 'zeus-popover::popover-form';
 }
