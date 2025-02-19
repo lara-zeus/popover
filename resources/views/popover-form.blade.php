@@ -5,6 +5,7 @@
     $getOffset = $getOffset();
     $getPopOverMaxWidth = $getPopOverMaxWidth();
     $getContent = $getContent();
+    $getIcon = $getIcon($getState);
 @endphp
 <x-dynamic-component
     :component="$getFieldWrapperView()"
@@ -34,7 +35,14 @@
                 @click="$refs.panel.toggle"
             @endif
         >
-            {{ $getState }}
+            {{ $getState ?? '' }}
+
+            @if($getIcon)
+                <x-filament::icon
+                    :icon="$getIcon"
+                    class="h-4 w-4 text-gray-500 dark:text-gray-400"
+                />
+            @endif
         </div>
 
         <div class="z-50 fi-popover-content w-[{{ $getPopOverMaxWidth }}px] ring-1 ring-gray-950/5 dark:ring-white/10 rounded-lg shadow-lg bg-white dark:bg-gray-800"
