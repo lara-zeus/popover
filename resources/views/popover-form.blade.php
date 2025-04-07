@@ -13,9 +13,9 @@
     :id="$getId()"
     :label="$getLabel()"
     :label-sr-only="$isLabelHidden()"
-    :helper-text="$getHelperText()"
+    {{--:helper-text="$getHelperText()"--}}
     :hint="$getHint()"
-    :hint-actions="$getHintActions()"
+    {{--:hint-actions="$getHintActions()"--}}
     :hint-color="$getHintColor()"
     :hint-icon="$getHintIcon()"
     :hint-icon-tooltip="$getHintIconTooltip()"

@@ -13,7 +13,7 @@
     $color = $getColor($state);
 @endphp
 <div
-    wire:key="{{ $this->getId() }}.table.record.{{ $recordKey }}.column.{{ $getName() }}"
+    wire:key="{{ $this->getId() }}.table.record.{{ $getRecordKey() }}.column.{{ $getName() }}"
     x-data
 
     @if($getTrigger === 'hover')
@@ -59,7 +59,7 @@
         {{ $formattedState }}
 
         @if($getIcon)
-            <x-filament::icon
+            <x-filament::icon :$getExtraAttributes()
                 :icon="$getIcon"
                 class="h-4 w-4 text-gray-500 dark:text-gray-400"
             />
