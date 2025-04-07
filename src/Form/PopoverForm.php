@@ -2,7 +2,6 @@
 
 namespace LaraZeus\Popover\Form;
 
-use Filament\Infolists\Components\Concerns\HasHelperText;
 use Filament\Infolists\Components\TextEntry;
 use LaraZeus\Popover\Concerns\HasPopover;
 
