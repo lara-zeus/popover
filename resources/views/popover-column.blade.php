@@ -35,13 +35,6 @@
     @endif
 
     <div
-        @style([
-            \Filament\Support\get_color_css_variables(
-                $color,
-                shades: [400, 600],
-                alias: 'tables::columns.text-column.item.label',
-            ) => ! in_array($color, [null, 'gray']),
-        ])
         @class([
             'text-sm relative w-full fi-popover-trigger cursor-pointer flex items-center gap-2',
             match ($color) {
