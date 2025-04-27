@@ -2,6 +2,14 @@
 
 All notable changes to `Popover` will be documented in this file
 
+## 1.1.10 - 2025-04-27
+
+### What's Changed
+
+* disable popover if the content is empty by @atmonshi in https://github.com/lara-zeus/popover/pull/28
+
+**Full Changelog**: https://github.com/lara-zeus/popover/compare/1.1.9...1.1.10
+
 ## 1.1.9 - 2025-02-19
 
 ### What's Changed
@@ -113,11 +121,13 @@ PopoverColumn::make('email')
 
 
 
+
 ```
 now in your LW view:
 
 ```html
 <livewire:user-card :$record :key="$record->id.'-'.$type"/>
+
 
 
 
