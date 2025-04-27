@@ -4,7 +4,7 @@
     $getPlacement = $getPlacement();
     $getOffset = $getOffset();
     $getPopOverMaxWidth = $getPopOverMaxWidth();
-    $getIcon = $getIcon($getState);
+    $getIcon = $getIcon();
     $descriptionAbove = $getDescriptionAbove();
     $descriptionBelow = $getDescriptionBelow();
     $canWrap = $canWrap();
@@ -52,7 +52,7 @@
         {{ $formattedState }}
 
         @if($getIcon)
-            <x-filament::icon :$getExtraAttributes()
+            <x-filament::icon
                 :icon="$getIcon"
                 class="h-4 w-4 text-gray-500 dark:text-gray-400"
             />
