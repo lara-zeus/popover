@@ -45,7 +45,7 @@
             @endif
         </div>
 
-        @if($getContent !== null)
+        @if (filled($getContent))
             <div class="z-50 fi-popover-content w-[{{ $getPopOverMaxWidth }}px] ring-1 ring-gray-950/5 dark:ring-white/10 rounded-lg shadow-lg bg-white dark:bg-gray-800"
                  x-transition:enter-start="opacity-0"
                  x-transition:leave-end="opacity-0"
