@@ -2,12 +2,14 @@
 
 namespace LaraZeus\Popover\Form;
 
-use Filament\Infolists\Components\TextEntry;
+use Filament\Forms\Components\TextInput;
+use Filament\Support\Concerns\HasIcon;
 use LaraZeus\Popover\Concerns\HasPopover;
 
-class PopoverForm extends TextEntry
+class PopoverForm extends TextInput
 {
     use HasPopover;
+    use HasIcon;
 
     protected string $view = 'zeus-popover::popover-form';
 }
