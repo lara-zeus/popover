@@ -5,7 +5,6 @@ namespace LaraZeus\Popover\Tables;
 use Filament\Support\Concerns;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\Concerns\CanFormatState;
-use Filament\Tables\Columns\Concerns\CanWrap;
 use Filament\Tables\Columns\Concerns\HasColor;
 use Filament\Tables\Columns\Concerns\HasDescription;
 use LaraZeus\Popover\Concerns\HasPopover;
@@ -13,7 +12,7 @@ use LaraZeus\Popover\Concerns\HasPopover;
 class PopoverColumn extends Column
 {
     use CanFormatState;
-    use CanWrap;
+    use Concerns\CanWrap;
     use Concerns\HasIcon;
     use HasColor;
     use HasDescription;

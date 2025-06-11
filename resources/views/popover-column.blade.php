@@ -4,7 +4,7 @@
     $getPlacement = $getPlacement();
     $getOffset = $getOffset();
     $getPopOverMaxWidth = $getPopOverMaxWidth();
-    $getIcon = $getIcon($getState);
+    $getIcon = $getIcon();
     $descriptionAbove = $getDescriptionAbove();
     $descriptionBelow = $getDescriptionBelow();
     $canWrap = $canWrap();
@@ -13,7 +13,7 @@
     $color = $getColor($state);
 @endphp
 <div
-    wire:key="{{ $this->getId() }}.table.record.{{ $recordKey }}.column.{{ $getName() }}"
+    wire:key="{{ $this->getId() }}.table.record.{{ $getRecordKey() }}.column.{{ $getName() }}"
     x-data
 
     @if($getTrigger === 'hover')
@@ -35,13 +35,6 @@
     @endif
 
     <div
-        @style([
-            \Filament\Support\get_color_css_variables(
-                $color,
-                shades: [400, 600],
-                alias: 'tables::columns.text-column.item.label',
-            ) => ! in_array($color, [null, 'gray']),
-        ])
         @class([
             'text-sm relative w-full fi-popover-trigger cursor-pointer flex items-center gap-2',
             match ($color) {
@@ -66,15 +59,17 @@
         @endif
     </div>
 
-    <div class="z-50 fi-popover-content w-[{{ $getPopOverMaxWidth }}px] ring-1 ring-gray-950/5 dark:ring-white/10 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition"
-         x-transition:enter-start="opacity-0"
-         x-transition:leave-end="opacity-0"
-         x-cloak
-         x-ref="panel"
-         x-float.placement.{{ $getPlacement }}.flip.teleport.offset="{ offset: {{ $getOffset }} }"
-    >
-        {{ $getContent }}
-    </div>
+    @if (filled($getContent))
+        <div class="z-50 fi-popover-content w-[{{ $getPopOverMaxWidth }}px] ring-1 ring-gray-950/5 dark:ring-white/10 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition"
+             x-transition:enter-start="opacity-0"
+             x-transition:leave-end="opacity-0"
+             x-cloak
+             x-ref="panel"
+             x-float.placement.{{ $getPlacement }}.flip.teleport.offset="{ offset: {{ $getOffset }} }"
+        >
+            {{ $getContent }}
+        </div>
+    @endif
 
     @if (filled($descriptionBelow))
         <p
