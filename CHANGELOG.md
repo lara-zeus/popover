@@ -2,6 +2,14 @@
 
 All notable changes to `Popover` will be documented in this file
 
+## 2.0.1 - 2025-10-22
+
+### What's Changed
+
+* support filament 4 by @atmonshi in https://github.com/lara-zeus/popover/pull/32
+
+**Full Changelog**: https://github.com/lara-zeus/popover/compare/2.0.0...2.0.1
+
 ## 1.1.9 - 2025-02-19
 
 ### What's Changed
@@ -113,11 +121,13 @@ PopoverColumn::make('email')
 
 
 
+
 ```
 now in your LW view:
 
 ```html
 <livewire:user-card :$record :key="$record->id.'-'.$type"/>
+
 
 
 
