@@ -4,7 +4,6 @@ namespace LaraZeus\Popover\Tables;
 
 use Filament\Support\Concerns\CanWrap;
 use Filament\Support\Concerns\HasIcon;
-use Filament\Support\Concerns;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\Concerns\CanFormatState;
 use Filament\Tables\Columns\Concerns\HasColor;
@@ -15,9 +14,9 @@ class PopoverColumn extends Column
 {
     use CanFormatState;
     use CanWrap;
-    use HasIcon;
     use HasColor;
     use HasDescription;
+    use HasIcon;
     use HasPopover;
 
     protected string $view = 'zeus-popover::popover-column';
