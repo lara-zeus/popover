@@ -2,6 +2,8 @@
 
 namespace LaraZeus\Popover\Tables;
 
+use Filament\Support\Concerns\CanWrap;
+use Filament\Support\Concerns\HasIcon;
 use Filament\Support\Concerns;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\Concerns\CanFormatState;
@@ -12,8 +14,8 @@ use LaraZeus\Popover\Concerns\HasPopover;
 class PopoverColumn extends Column
 {
     use CanFormatState;
-    use Concerns\CanWrap;
-    use Concerns\HasIcon;
+    use CanWrap;
+    use HasIcon;
     use HasColor;
     use HasDescription;
     use HasPopover;
