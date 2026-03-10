@@ -2,6 +2,10 @@
 
 All notable changes to `Popover` will be documented in this file
 
+## 3.0.0 - 2026-03-10
+
+support filament 5
+
 ## 2.0.1 - 2025-10-22
 
 ### What's Changed
@@ -122,11 +126,13 @@ PopoverColumn::make('email')
 
 
 
+
 ```
 now in your LW view:
 
 ```html
 <livewire:user-card :$record :key="$record->id.'-'.$type"/>
+
 
 
 
