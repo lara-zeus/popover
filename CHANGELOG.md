@@ -2,6 +2,15 @@
 
 All notable changes to `Popover` will be documented in this file
 
+## 3.0.1 - 2026-04-19
+
+### What's Changed
+
+* add support for laravel 13 and filament 5 by @atmonshi in https://github.com/lara-zeus/popover/pull/35
+  remove illuminate/contracts
+
+**Full Changelog**: https://github.com/lara-zeus/popover/compare/3.0.0...3.0.1
+
 ## 2.0.2 - 2026-04-16
 
 ### What's Changed
@@ -136,11 +145,13 @@ PopoverColumn::make('email')
 
 
 
+
 ```
 now in your LW view:
 
 ```html
 <livewire:user-card :$record :key="$record->id.'-'.$type"/>
+
 
 
 
