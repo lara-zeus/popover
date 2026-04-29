@@ -2,6 +2,15 @@
 
 All notable changes to `Popover` will be documented in this file
 
+## 3.0.2 - 2026-04-29
+
+### What's Changed
+
+* chore: align docs structure and cleanup by @atmonshi in https://github.com/lara-zeus/popover/pull/36
+* fix get state by @atmonshi in https://github.com/lara-zeus/popover/pull/37
+
+**Full Changelog**: https://github.com/lara-zeus/popover/compare/3.0.1...3.0.2
+
 ## 2.0.1 - 2025-10-22
 
 ### What's Changed
@@ -122,11 +131,13 @@ PopoverColumn::make('email')
 
 
 
+
 ```
 now in your LW view:
 
 ```html
 <livewire:user-card :$record :key="$record->id.'-'.$type"/>
+
 
 
 
