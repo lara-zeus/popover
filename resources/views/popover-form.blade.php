@@ -5,7 +5,7 @@
     $getOffset = $getOffset();
     $getPopOverMaxWidth = $getPopOverMaxWidth();
     $getContent = $getContent();
-    $getIcon = $getIcon($getState);
+    $getIcon = $getIcon();
 @endphp
 <x-dynamic-component
     :component="$getFieldWrapperView()"
@@ -13,9 +13,7 @@
     :id="$getId()"
     :label="$getLabel()"
     :label-sr-only="$isLabelHidden()"
-    {{--:helper-text="$getHelperText()"--}}
     :hint="$getHint()"
-    {{--:hint-actions="$getHintActions()"--}}
     :hint-color="$getHintColor()"
     :hint-icon="$getHintIcon()"
     :hint-icon-tooltip="$getHintIconTooltip()"
